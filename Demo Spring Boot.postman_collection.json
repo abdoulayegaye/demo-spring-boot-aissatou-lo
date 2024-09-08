@@ -1,0 +1,172 @@
+{
+	"info": {
+		"_postman_id": "8fa1c9e5-b09a-4070-a32e-95e9ab26f7a8",
+		"name": "Demo Spring Boot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6293469"
+	},
+	"item": [
+		{
+			"name": "Liste medecins",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/api/v1/medecins",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"v1",
+						"medecins"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get medecin BY ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/api/v1/medecins/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"v1",
+						"medecins",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get medecin BY Phone",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/api/v1/medecins/get-medecin-by-phone?phone=781678900",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"v1",
+						"medecins",
+						"get-medecin-by-phone"
+					],
+					"query": [
+						{
+							"key": "phone",
+							"value": "781678900"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Creer medecin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nom\": \"MEDECIN Test\",\r\n    \"prenom\": \"Prenom Test\",\r\n    \"telephone\": \"785643221\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/api/v1/medecins",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"v1",
+						"medecins"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update medecin",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 5,\r\n    \"nom\": \"Test\",\r\n    \"prenom\": \"Test\",\r\n    \"telephone\": \"780643221\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/api/v1/medecins",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"v1",
+						"medecins"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete medecin",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/api/v1/medecins/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"v1",
+						"medecins",
+						"5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
